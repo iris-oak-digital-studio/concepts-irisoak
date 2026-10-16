@@ -3,13 +3,15 @@ import Link from "next/link";
 
 /*
   Concept websites by Iris & Oak, each with its own page in this project.
+  Previews are homepage screenshots (about 4:3), shown in a matching 4:3
+  frame and cropped from the top so each site's header and headline show.
 */
 const concepts = [
   {
     name: "Willow & Gray",
     type: "Restaurant",
     href: "/willowandgrayrestaurant",
-    image: "/images/hero-food.jpg",
+    image: "/images/concepts/willow-and-gray/willow-and-gray-concept.png",
     alt: "Willow & Gray restaurant concept homepage",
   },
   {
@@ -57,7 +59,7 @@ export default function ConceptsHome() {
         {concepts.map((concept) => (
           <li key={concept.name}>
             <Link href={concept.href} className="group block">
-              <span className="relative block aspect-[16/10] overflow-hidden rounded-lg bg-[#e8e1d4]">
+              <span className="relative block aspect-[4/3] overflow-hidden rounded-lg bg-[#e8e1d4] ring-1 ring-[#20231f]/10">
                 <Image
                   src={concept.image}
                   alt={concept.alt}
